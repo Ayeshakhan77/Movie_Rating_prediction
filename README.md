@@ -1,73 +1,177 @@
-## 🎬 Movie Rating Prediction using Machine Learning
+# Movie Rating Prediction
 
-## 📌 Overview
-This project focuses on predicting IMDb movie ratings using machine learning techniques. The model is trained on movie metadata such as votes, runtime, genre, director, and metascore.
+## Introduction
 
----
-
-## 🎯 Objective
-To develop a regression model that accurately predicts movie ratings based on historical IMDb dataset features.
+The **Movie Rating Prediction** project is a machine learning-based application developed to predict IMDb movie ratings using historical movie metadata. The main objective of this project is to analyze different movie-related features and estimate the expected rating of a film. This project demonstrates how predictive analytics can be applied in the entertainment industry using supervised machine learning techniques.
 
 ---
 
-## 📊 Dataset
-The dataset contains the following features:
+## Project Overview
 
-- Title  
-- Year  
-- Rating (Target Variable)  
-- Votes  
-- Runtime (Minutes)  
-- Genre  
-- Director  
-- Metascore  
+This project uses movie information from the IMDb dataset to predict ratings by training regression models on historical data. The system compares multiple machine learning algorithms to determine which model performs better for rating prediction.
 
----
+### Main Objectives
 
-## 🧹 Data Preprocessing
-- Handled missing values using mean/median imputation  
-- Removed invalid entries  
-- Encoded categorical variables (Genre, Director)  
-- Selected relevant features for modeling  
+- Predict movie ratings accurately  
+- Analyze important movie features  
+- Compare machine learning models  
+- Evaluate model performance  
+- Visualize prediction results  
 
 ---
 
-## 📈 Exploratory Data Analysis (EDA)
+## Dataset Description
 
-Key visualizations performed:
+The dataset contains movie records collected from the IMDb movies dataset. Each row represents a single movie and its attributes.
 
-- 📊 Rating distribution (Histogram)  
-- 📈 Votes vs Rating (Scatter Plot)  
-- 📊 Genre distribution (Bar Chart)  
-- 🌡️ Correlation Heatmap  
+### Dataset Features
+
+| Column Name | Description |
+|-------------|-------------|
+| `Title` | Movie title |
+| `Year` | Release year |
+| `Genre` | Movie category |
+| `Runtime` | Duration in minutes |
+| `Votes` | Total user votes |
+| `Director` | Movie director |
+| `Metascore` | Critic score |
+| `Rating` | IMDb rating (target variable) |
+
+### Dataset Characteristics
+
+- Structured tabular dataset  
+- Mixed numerical and categorical features  
+- Suitable for regression analysis  
+- Real-world entertainment dataset  
 
 ---
 
-## 🤖 Models Used
+## Methodology
 
-### 1. Linear Regression
-- Baseline model  
-- Captures linear relationships  
+The project follows a complete machine learning pipeline.
 
-### 2. Random Forest Regressor
-- Handles non-linear relationships  
-- Ensemble learning method  
+### 1. Data Collection
+
+The IMDb dataset is imported into a Pandas DataFrame for processing.
+
+### 2. Data Preprocessing
+
+The preprocessing steps include:
+
+- Handling missing values  
+- Removing invalid records  
+- Encoding categorical features  
+- Selecting relevant variables  
+- Splitting training and testing data  
+
+### 3. Exploratory Data Analysis
+
+Data analysis is performed to understand:
+
+- Rating distribution  
+- Feature relationships  
+- Correlation between variables  
+- Important predictive factors  
+
+### 4. Model Training
+
+The following models are used:
+
+- `Linear Regression`
+- `Random Forest Regressor`
+
+### 5. Model Evaluation
+
+The models are evaluated using:
+
+- Mean Squared Error (`MSE`)
+- Root Mean Squared Error (`RMSE`)
+- R² Score  
 
 ---
 
-## 📊 Model Performance
+## Results
+
+The models successfully predicted movie ratings based on historical movie features. The comparison showed that the linear model performed slightly better than the ensemble model for this dataset.
+
+### Predicted vs Actual Ratings
+
+![Movie Rating Prediction Result](images/movie_rating_prediction.png)
+
+### Performance Summary
 
 | Model | MSE | RMSE | R² Score |
-|------|-----|------|---------|
-| Linear Regression | 0.449 | 0.670 | **0.531** |
-| Random Forest | 0.451 | 0.671 | 0.530 |
+|-------|-----|------|---------|
+| `Linear Regression` | `0.449` | `0.670` | `0.531` |
+| `Random Forest` | `0.451` | `0.671` | `0.530` |
+
+### Key Findings
+
+- Votes strongly influence rating prediction  
+- Feature engineering improved performance  
+- Linear relationships exist in the dataset  
+- Machine learning can estimate movie ratings effectively  
 
 ---
 
-## 🧠 Key Insights
-- Feature engineering significantly improved performance  
-- Linear Regression performed slightly better than Random Forest  
-- Data shows a mostly linear relationship with ratings  
+## Conclusion
 
+This project demonstrates how machine learning can be used to predict movie ratings from historical IMDb data. By analyzing movie metadata and comparing different regression models, the project highlights the practical use of predictive analytics in entertainment data. It also provides a strong foundation for more advanced recommendation and rating systems.
 
-python main.py
+---
+
+## How to Run
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/Ayeshakhan77/Movie_Rating_prediction.git
+```
+
+### Navigate to the Project Folder
+
+```bash
+cd Movie_Rating_prediction
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Launch Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+### Open the Project File
+
+```bash
+Movie_prediction.ipynb
+```
+
+---
+
+## Technologies Used
+
+- `Python`
+- `Pandas`
+- `NumPy`
+- `Matplotlib`
+- `Scikit-learn`
+- `Jupyter Notebook`
+
+---
+
+## Future Improvements
+
+Possible future improvements include:
+
+- Adding advanced regression models  
+- Improving feature engineering  
+- Using deep learning methods  
+- Deploying a web-based prediction app  
+
+---
